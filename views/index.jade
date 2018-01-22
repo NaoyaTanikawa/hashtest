@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action="/", method="post")
+    div
+      label ハッシュ元文字列：
+        input(type="text", name="hashbefore")
+        input(type="submit", value="ハッシュ計算")
+        br
+      label ハッシュ結果：
+        label #{hashResult}
